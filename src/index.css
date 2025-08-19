@@ -1,0 +1,285 @@
+:root {
+  --bg-color: #00141d;
+  --card-color: #001824;
+  --primary-color: #005984;
+  --secondary-color: #708f9d;
+  --white-1: #f0f7fa;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--white-1);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  padding: 16px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  position: sticky;
+  top: 0;
+  gap: 10px;
+  align-self: stretch;
+  background: rgb(221 221 221);
+  z-index: 3;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 8px;
+}
+
+.heading {
+  /* heading-1 */
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.font-body-1 {
+  /* body-1 */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.font-body-2 {
+  /* body-2 */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+p {
+  color: var(--secondary-color);
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  align-self: stretch;
+  margin: 24px 56px;
+  flex-wrap: wrap;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-color);
+  border-radius: 8px;
+  padding: 40px;
+  gap: 24px;
+  flex: 1 0 0;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.wrapper-input {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 24px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  flex: 1 0 0;
+}
+
+input {
+  border-radius: 8px;
+  border: 1px solid #023;
+  background: var(--bg-colorr, #00141d);
+  display: flex;
+  height: 40px;
+  padding: 0 12px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  color: var(--white-1);
+  position: relative;
+}
+
+input::placeholder {
+  color: var(--secondary-color);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  cursor: pointer;
+  background: transparent;
+  z-index: 5;
+}
+
+input[type="date"]::after {
+  background: url("/src/assets/icon-calendar.svg") no-repeat right center;
+  background-size: 18px;
+  padding-right: 32px; /* Espaço para o ícone */
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.wrapper-pill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  display: flex;
+  padding: 4px 4px 4px 8px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 25px;
+  border: 1px solid var(--primary-color, #005984);
+  background: var(--card-color, #001824);
+  cursor: pointer;
+}
+
+#buscarAtivos {
+  display: flex;
+  min-width: 300px;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex: 1 0 0;
+}
+
+button {
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  border: none;
+  color: var(--white-1);
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  padding: 0 16px;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #007cb8;
+  transition: all 0.3s ease;
+}
+
+.card-inicial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-item {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  margin: 8px 0;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wrapper-data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 13px;
+}
+
+.up {
+  color: #62ff8c;
+}
+
+.down {
+  color: #ff7b7b;
+}
+
+#cardBuscarAtivos {
+  max-width: 380px;
+}
+
+.container-grafico {
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  section {
+    margin: 24px;
+  }
+  #cardBuscarAtivos {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  section {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  section {
+        margin: 16px;
+        gap: 16px;
+    }
+  .card-container {
+    padding: 24px;
+  }
+}
